@@ -1,0 +1,131 @@
+.slider {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	color: white;
+	font-size: 10em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;   
+}
+
+.slide-smooth {
+	transition: ease-in-out 1s;
+}
+
+.slide1 {
+	background-image: url("../images/C_1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.slide2 {
+	background-image: url("../images/C_2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.slide3 {
+	background-image: url("../images/C_3.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.slide4 {
+	background-image: url("../images/C_4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+#btnPrev, #btnNext {
+	width: 60px;
+	height: 100%;
+	border: none;
+	background-color: rgba(66, 66, 66, 0);
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+	transition: ease-in-out .1s;
+}
+
+#btnPrev:hover, #btnNext:hover {
+	background-color: rgba(66, 66, 66, 0.4);
+}
+
+#btnPrev {
+	left: 0px;
+}
+
+#btnNext {
+	right: 0px;
+}
+
+.slider-navbar {
+	width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 360px;
+    left: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-navbar button {
+	width: 13px;
+    height: 13px;
+    background-color: #ddd;
+    border: none;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Animation of filling active navbar button to show time till autoslide */
+@keyframes autoSlideFill {
+	from {box-shadow: inset 0px 0 0 0 rgb(155, 33, 33);}
+	to {box-shadow: inset 25px 0 0 0 rgb(155, 33, 33);}
+}
+
+.slider-navbar button.slider-navbar_cur-btn {
+	background-color: #00479d;
+}
+
+.slider-navbar_autoplay button.slider-navbar_cur-btn {
+	animation: 3s linear autoSlideFill;
+}
+
+.slider-navbar button:not(.slider-navbar_cur-btn):hover {
+	background-color: rgb(255, 255, 255);
+}
+
+#block {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: rgb(141, 99, 99);
+	right: 50px;
+	bottom: 50px;
+}
+
+#btn {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 50px;
+	bottom: 150px;
+}
