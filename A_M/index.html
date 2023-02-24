@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            max-width: 480px;
+            margin: auto;
+        }
+        @media(max-width:480px) {
+            header {
+                display: block;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/A_header.jpg">
+    </header>
+    <main>
+        <section>
+            <img src="./images/A.jpg">
+        </section>
+    </main>
+</body>
+</html>
